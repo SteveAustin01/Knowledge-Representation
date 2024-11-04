@@ -36,21 +36,19 @@ Here are some instances of how the game logic is established:
 
 Defining Symbols:
 
-python
 mustard = Symbol("ColMustard")
 kitchen = Symbol("kitchen")
 knife = Symbol("knife")
+
 Building the Knowledge Base:
 
-python
 knowledge = And(
 Or(mustard, plum, scarlet), # At least one character is implicated
 Or(ballroom, kitchen, library), # At least one room is implicated
 Or(knife, revolver, wrench) # At least one weapon is implicated
 )
-Incorporating Constraints:
 
-python
+Incorporating Constraints:
 
 knowledge.add(Not(mustard))
 knowledge.add(Not(kitchen))
